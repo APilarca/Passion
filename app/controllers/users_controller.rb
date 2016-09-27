@@ -2,7 +2,7 @@ get '' do
   erb :'/users/new'
 end
 
-post '/useres/new' do
+post '/users/new' do
   @user =User.new(params)
   if @user.save
     login(@user)
