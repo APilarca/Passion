@@ -18,13 +18,13 @@
   <title></title>
 </head>
 <body>
-<% if seession[:user_id] %>
+<% if session[:user_id] %>
   <a href="/">Home</a>
   <li><a href="sessions/delete">Logout</a></li>
   <li><a href="/users/<%= session[:user_id] %>"><%= "#{current_user.username}".capitalize %></a></li>
 <% else %>
   <li><a href="/sessions/new">Login</a></li>
-  <li><a href="/users/new"></a>Register</li>
+  <li><a href="/users/new">Register</a></li>
 <% end %>
   <%= yield %>
 </body>

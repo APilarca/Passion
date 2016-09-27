@@ -1,4 +1,8 @@
-get '' do
+get '/' do
+  redirect '/users/new'
+end
+
+get '/users/new' do
   erb :'/users/new'
 end
 
@@ -7,7 +11,7 @@ post '/users/new' do
   if @user.save
     login(@user)
 
-    redirect "/usres/#{@user.id}"
+    redirect "/users/#{@user.id}"
   else
     @error = "Sorry, please try again!"
 
