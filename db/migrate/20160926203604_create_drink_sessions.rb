@@ -1,4 +1,4 @@
-class CreateDrinkSesh < ActiveRecord::Migration
+class CreateDrinkSessions < ActiveRecord::Migration
   def change
     create_table :drink_sesh do |t|
       t.references :user_id

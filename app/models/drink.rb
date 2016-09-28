@@ -1,3 +1,3 @@
 class Drink < ActiveRecord::Base
-  # Remember to create a migration!
+  has_many :drink_sessions, through: :drink_sessions_drinks
 end

@@ -1,6 +1,6 @@
-class CreateDrinkSeshDrinks < ActiveRecord::Migration
+class CreateDrinkSessionsDrinks < ActiveRecord::Migration
   def change
-    create_table :drink_sesh_drinks do |t|
+    create_table :drink_sessions_drinks do |t|
       t.references :drink_id
       t.references :session_id
 
