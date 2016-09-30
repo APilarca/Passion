@@ -17,6 +17,7 @@ post '/drink_sessions' do
 end
 
 get '/drink_sessions/:id' do
+  @drink_session = DrinkSession.find(params[:id])
   erb :'/drink_sessions/show'
 end
 
