@@ -22,6 +22,7 @@
   <a href="/">Home</a>
   <li><a href="/sessions/delete">Logout</a></li>
   <li><a href="/users/<%= session[:user_id] %>"><%= "#{current_user.username}".capitalize %></a></li>
+  <li> <a href="/drink_sessions">Drink Sessions</a> </li>
 <% else %>
   <li><a href="/sessions/new">Login</a></li>
   <li><a href="/users/new">Register</a></li>

@@ -6,7 +6,7 @@ post '/sessions/new' do
   @user = User.authenticate(params[:email], params[:password])
   if @user
     login(@user)
-    redirect "/users/#{@user.id}"
+    redirect "/drink_sessions"
   else
     @error = "Email or password incorrect!"
     erb :'/sessions/new'

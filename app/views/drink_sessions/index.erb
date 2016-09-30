@@ -1,0 +1,8 @@
+<h1>Here's your previous adventures!</h1>
+
+<p>Start a new <a href="/drink_sessions/new">adventure</a>?</p>
+
+<% @drink_sessions.reverse.each do |session| %>
+  <a href="/drink_sessions/ <%= session.id %> "></a>
+  <h4> <%= session.title %> </h4>
+  <% end %>

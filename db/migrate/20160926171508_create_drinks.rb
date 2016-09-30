@@ -1,6 +1,6 @@
 class CreateDrinks < ActiveRecord::Migration
   def change
-    create_table :drink do |t|
+    create_table :drinks do |t|
       t.string :name_of_drink
       t.integer :alcohol
 
