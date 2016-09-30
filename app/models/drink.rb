@@ -1,3 +1,3 @@
 class Drink < ActiveRecord::Base
-  has_many :drink_sessions, through: :drink_sessions_drinks
+  has_many :drink_sessions, through: :dsd
 end

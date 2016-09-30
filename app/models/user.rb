@@ -2,6 +2,7 @@ require 'bcrypt'
 
 class User < ActiveRecord::Base
   has_many :drink_sessions
+
   # users.password_hash in the database is a :string
   include BCrypt
 
