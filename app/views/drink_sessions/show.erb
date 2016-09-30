@@ -1,2 +1,59 @@
-<h1> <%= @drink_session.title %> </h1>
+<script type="text/javascript">
 
+document.addEventListener('DOMContentLoaded', function () {
+  q = "drunk"; // search query
+
+  request = new XMLHttpRequest;
+  request.open('GET', 'http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag='+q, true);
+
+  request.onload = function() {
+    if (request.status >= 200 && request.status < 400){
+      data = JSON.parse(request.responseText).data.image_url;
+      console.log(data);
+      document.getElementById("giphyme").innerHTML = '<center><img src = "'+data+'"  title="GIF via Giphy"></center>';
+    } else {
+      console.log('reached giphy, but API returned an error');
+     }
+  };
+
+  request.onerror = function() {
+    console.log('connection error');
+  };
+
+  request.send();
+});
+</script>
+
+<h1> <%= @drink_session.title %> </h1>
+<head>
+
+<span id="giphyme"></span>
+
+</head>
+
+<h3>What did you have to drink that night?</h3>
+
+<% @drinks.each do |drink| %>
+<li> <%= drink.name_of_drink %>
+<% end %></li>
+
+
+<!-- <script>
+var x = document.getElementById("demo");
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+function showPosition(position) {
+    x.innerHTML = "Latitude: " + position.coords.latitude +
+    "<br>Longitude: " + position.coords.longitude;
+}
+
+</script>
+
+
+
+<img src="https://maps.googleapis.com/maps/api/staticmap?center=40.714728,-73.998672&zoom=14&size=400x400&key=%>" alt="fuck"> -->

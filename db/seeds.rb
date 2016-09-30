@@ -1,6 +1,12 @@
 User.create(username: "a", email:"a@a.com", password:"password")
-DrinkSession.create(title: "funday", user_id: 1, total_BAC: 1)
+DrinkSession.create(title: "Funday", user_id: 1, total_BAC: 1)
 Drink.create(name_of_drink: "beer", alcohol: 1)
+Drink.create(name_of_drink: "Heineken" ,alcohol: 1)
+Drink.create(name_of_drink: "gin" ,alcohol: 1)
+Drink.create(name_of_drink: "hard cider" ,alcohol: 1)
+Drink.create(name_of_drink: "tequila" ,alcohol: 1)
+Drink.create(name_of_drink: "Vodka" ,alcohol: 1)
+Drink.create(name_of_drink: "Whisky" ,alcohol: 1)
 Dsd.create(drink_id: 1, drink_session_id: 1)
 List.create(title: "check", content: "jsdkfhsks", user_id: 1)
 

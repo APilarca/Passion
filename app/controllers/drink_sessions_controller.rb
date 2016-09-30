@@ -18,6 +18,7 @@ end
 
 get '/drink_sessions/:id' do
   @drink_session = DrinkSession.find(params[:id])
+  @drinks = Drink.all
   erb :'/drink_sessions/show'
 end
 
